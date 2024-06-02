@@ -8,7 +8,7 @@ router.get('/:code', async (req, res) => {
   if (!url) {
     return res.status(404).json({ message: 'No such url found' });
   }
-  res.json({ longUrl: url.longUrl });
+  res.redirect(url.longUrl);
 });
 
 module.exports = router;

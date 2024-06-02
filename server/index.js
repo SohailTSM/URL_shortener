@@ -1,5 +1,6 @@
 const express = require('express');
 const mongoose = require('mongoose');
+const cors = require('cors');
 require('dotenv/config');
 const indexRouter = require('./routes/index');
 const urlRouter = require('./routes/url');
@@ -13,6 +14,7 @@ mongoose
     console.log('Connected to DB');
   });
 
+app.use(cors());
 app.use(express.json());
 
 app.use('/', indexRouter);
