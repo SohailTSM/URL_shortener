@@ -11,7 +11,8 @@ const Home = () => {
 
   const shortenUrl = async (e) => {
     // e.preventDefault();
-    const apiEndPoint = 'http://localhost:3000/api/v1/shorten';
+    const apiEndPoint =
+      'https://url-shortener-ig8p.onrender.com/api/v1/shorten';
     const res = await fetch(apiEndPoint, {
       method: 'post',
       headers: { 'Content-Type': 'application/json' },
